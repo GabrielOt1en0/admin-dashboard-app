@@ -7,5 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base:'/Admin_dashboard_prototype/',
+  base:'/admin-dashboard-app/',
 })
