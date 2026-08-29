@@ -46,11 +46,12 @@ export default function Scouts() {
           <h1 className="text-2xl font-semibold text-foreground tracking-tight">Scouts</h1>
           <p className="text-sm text-muted-foreground mt-1">Manage your scouting network and assignments.</p>
         </div>
+        {/*Placeholder button to invite scouts to the email*/}
         <button className="px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-lg flex items-center gap-2 hover:bg-primary/90 transition-colors cursor-pointer">
           <UserPlus size={18} /> Invite Scout
         </button>
       </div>
-
+       { /*Searchbar to search scouts*/}
       <div className="bg-card border border-border rounded-xl overflow-hidden">
         <div className="p-4 border-b border-border flex justify-between items-center">
           <div className="relative w-64">
@@ -86,6 +87,7 @@ export default function Scouts() {
                       {scout.status}
                     </span>
                   </td>
+                 
                   <td className="px-6 py-4 text-right relative">
                     {editingStatusId === scout.id ? (
                       <select
@@ -101,6 +103,7 @@ export default function Scouts() {
                       </select>
                     ) : (
                       <div className="relative inline-block text-left">
+                         {/*Actions the admin on scouts that are on the platform*/}
                         <button
                           onClick={() => setOpenMenuId(openMenuId === scout.id ? null : scout.id)}
                           className="p-2 text-muted-foreground hover:bg-muted rounded-lg cursor-pointer"
@@ -111,6 +114,7 @@ export default function Scouts() {
                         {openMenuId === scout.id && (
                           <div className="absolute right-0 mt-2 w-40 origin-top-right rounded-md bg-card border border-border shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
                             <div className="py-1">
+                              {/* Change the staus of scouts*/}
                               <button
                                 onClick={() => {
                                   setEditingStatusId(scout.id);

@@ -1,3 +1,4 @@
+//imports
 import React, { useState } from "react";
 import { Users, UserCheck, Trophy, BarChart2, Calendar, Search, Bell, Settings, LayoutDashboard, LogOut } from "lucide-react";
 import Dashboard from "./components/Dashboard";
@@ -10,11 +11,11 @@ import AppSettings from "./components/Settings";
 export default function App() {
   const [activeTab, setActiveTab] = useState("dashboard");
   
-  // Lifted state for the admin profile
+  // Placeholder admin name and email
   const [adminName, setAdminName] = useState("Admin User");
   const [adminEmail, setAdminEmail] = useState("admin@matobev.com");
 
-  // Helper function to extract initials
+  // Extracts initials from username
   const getInitials = (name: string) => {
     const parts = name.split(" ").filter((p) => p.length > 0);
     if (parts.length >= 2) return (parts[0][0] + parts[1][0]).toUpperCase();
@@ -34,7 +35,7 @@ export default function App() {
             Matobev
           </div>
         </div>
-
+        
         <nav className="flex-1 py-6 px-4 space-y-1 overflow-y-auto">
           <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 px-2">Platform</div>
           <NavItem icon={LayoutDashboard} label="Dashboard" active={activeTab === "dashboard"} onClick={() => setActiveTab("dashboard")} />
@@ -55,6 +56,7 @@ export default function App() {
               <div className="text-sm font-medium text-white truncate">{adminName}</div>
               <div className="text-xs text-slate-400 truncate">{adminEmail}</div>
             </div>
+            {/*Placeholder button for logout action*/}
             <LogOut className="w-4 h-4 text-slate-400 hover:text-white transition-colors" />
           </div>
         </div>
