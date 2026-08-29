@@ -227,7 +227,7 @@ export default function Players() {
       {/* Add Player Interface */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-card border border-border rounded-xl max-w-md w-full p-6 space-y-4 shadow-lg">
+          <div className="bg-card border border-border rounded-xl max-w-md w-full p-6 space-y-4 shadow-lg max-h-[90vh] overflow-y-auto">
             <div className="flex justify-between items-center">
               <h3 className="text-lg font-semibold text-foreground">Add New Player</h3>
               <button
